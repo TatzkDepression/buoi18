@@ -102,3 +102,23 @@ document.querySelector("#timSoNguyenTo").onclick = function () {
   }
 };
 // 9
+var soNguyen9 = [];
+document.querySelector("#themSoNguyen").onclick = function (event) {
+  event.preventDefault();
+  var so = document.querySelector("#numberNguyen").value * 1;
+  soNguyen9.push(so);
+  document.querySelector(".base2 form.form-group").reset(); //dùng để reset lại khi ấn "thêm số"
+  document.querySelector("#result9_1").innerHTML = `
+  Các số vừa nhập: [${soNguyen9}]`;
+};
+
+document.querySelector("#demSoNguyen").onclick = function () {
+  var demSoNguyen = 0;
+  for (var index = 0; index < soNguyen9.length; index++) {
+    if (Number.isInteger(soNguyen9[index])) {
+      demSoNguyen++;
+    }
+  }
+  document.querySelector("#result9_2").innerHTML = `
+Mảng có ${demSoNguyen} số nguyên`;
+};
