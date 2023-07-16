@@ -80,3 +80,25 @@ document.querySelector("#doicho").onclick = function () {
   document.querySelector("#result6").innerHTML = `
   Các số sau khi đổi: [${arrSo}]`;
 };
+// 7
+document.querySelector("#sapXepTangDan").onclick = function () {
+  // _.sortBy(arrSo) áp dụng thư viện của lodash mới học hôm 15-07-2023
+  // _.sortBy() thư viện sắp xếp tăng dần
+
+  var soTangDan = _.sortBy(arrSo); // cách 2
+  // arrSo.sort() Cách 1
+  document.querySelector("#result7").innerHTML = soTangDan;
+};
+// 8
+
+document.querySelector("#timSoNguyenTo").onclick = function () {
+  var soNTDauTien = timSoNguyenTo(arrSo);
+  if (soNTDauTien !== -1) {
+    document.querySelector("#result8").innerHTML = `
+    số nguyên tố đầu tiên là: ${soNTDauTien}`;
+  } else {
+    document.querySelector("#result8").innerHTML = `
+    không có số nguyên tố`;
+  }
+};
+// 9
