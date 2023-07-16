@@ -122,3 +122,26 @@ document.querySelector("#demSoNguyen").onclick = function () {
   document.querySelector("#result9_2").innerHTML = `
 Mảng có ${demSoNguyen} số nguyên`;
 };
+
+// 10
+document.querySelector("#soSanhAmDuong").onclick = function () {
+  var soDuong = 0;
+  var soAm = 0;
+  for (var index = 0; index < arrSo.length; index++) {
+    if (nhanBietSoAmDuong(arrSo[index]) === true) {
+      soDuong++;
+    } else if (nhanBietSoAmDuong(arrSo[index]) === false) {
+      soAm++;
+    }
+  }
+  if (soAm === soDuong) {
+    document.querySelector("#result10").innerHTML = `
+    Số âm = Số dương`;
+  } else if (soAm < soDuong) {
+    document.querySelector("#result10").innerHTML = `
+    Số âm < Số dương`;
+  } else {
+    document.querySelector("#result10").innerHTML = `
+    Số âm > Số dương`;
+  }
+};

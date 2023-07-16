@@ -19,3 +19,17 @@ function timSoNguyenTo(arr) {
   }
   return -1;
 }
+/**
+ *
+ * @param {*} arr Dùng để nhận biết đó là số âm hay số dương
+ * @returns
+ */
+function nhanBietSoAmDuong(arr) {
+  if (arr === 0) {
+    return 0; // không dương cũng không âm
+  } else if (arr > 0) {
+    return true; // dương
+  } else {
+    return false; //âm
+  }
+}
